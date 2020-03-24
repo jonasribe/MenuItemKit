@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  AutoPopupMenuContorllerDemo
+//  AutoPopupMenuControllerDemo
 //
 //  Created by CHEN Xian-an on 25/02/2018.
 //  Copyright © 2018 Neo Xian-an CHEN. All rights reserved.
@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     let controller = UIMenuController.shared
     let textItem = UIMenuItem(title: "Toggle Color Item") { [weak self] _ in
-      self?.showAlertWithTitle("text item tapped")
+      self?.showAlertWithTitle("Toggle item tapped")
       self?.showsColorItem = !(self?.showsColorItem ?? true)
     }
 
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     }
 
     let colorImage = UIImage(named: "ColorImage")
-    let colorImageItem = UIMenuItem(title: "Image", image: colorImage) { [weak self] _ in
+    let colorImageItem = UIMenuItem(title: "ColorImage", image: colorImage) { [weak self] _ in
       self?.showAlertWithTitle("color image item tapped")
     }
 

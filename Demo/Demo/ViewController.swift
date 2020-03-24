@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     }
 
     let colorImage = UIImage(named: "ColorImage")
-    let colorImageItem = UIMenuItem(title: "Image", image: colorImage) { [weak self] _ in
+    let colorImageItem = UIMenuItem(title: "ColorImage", image: colorImage) { [weak self] _ in
       self?.showAlertWithTitle("color image item tapped")
     }
     
@@ -39,12 +39,20 @@ class ViewController: UIViewController {
       let item2 = UIMenuItem(title: "2", action: action)
       let item3 = UIMenuItem(title: "3", action: action)
       controller.menuItems = [item1, item2, item3]
-      controller.setMenuVisible(true, animated: true)
+      if #available(iOS 13.0, *) {
+        controller.isMenuVisible = true
+      } else {
+        controller.setMenuVisible(true, animated: true)
+      }
     }
     
     controller.menuItems = [textItem, imageItem, colorImageItem, nextItem]
-    controller.setTargetRect(button.bounds, in: button)
-    controller.setMenuVisible(true, animated: true)
+    if #available(iOS 13.0, *) {
+      controller.showMenu(from: button, rect: button.bounds)
+    } else {
+      controller.setTargetRect(button.bounds, in: button)
+      controller.setMenuVisible(true, animated: true)
+    }
   }
 
   func showAlertWithTitle(_ title: String) {
