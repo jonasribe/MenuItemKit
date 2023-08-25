@@ -113,9 +113,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E0EFAE5E1C49F99400334D78 /* Build configuration list for PBXNativeTarget "MenuItemKit" */;
 			buildPhases = (
+				E0EFAE471C49F99300334D78 /* Headers */,
 				E0EFAE451C49F99300334D78 /* Sources */,
 				E0EFAE461C49F99300334D78 /* Frameworks */,
-				E0EFAE471C49F99300334D78 /* Headers */,
 				E0EFAE481C49F99300334D78 /* Resources */,
 			);
 			buildRules = (
@@ -322,9 +322,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lazyapps.MenuItemKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "$(ARCHS_STANDARD)";
 			};
 			name = Debug;
@@ -347,9 +352,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lazyapps.MenuItemKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "$(ARCHS_STANDARD)";
 			};
 			name = Release;
